@@ -13,3 +13,7 @@ sudo tar -zxvf go1.20.10.linux-amd64.tar.gz -C /usr/local/
 echo "export PATH=/usr/local/go/bin:${PATH}" | sudo tee /etc/profile.d/go.sh
 source /etc/profile.d/go.sh
 go version
+echo "deb [trusted=yes] https://apt.fury.io/kurtosis-tech/ /" | sudo tee /etc/apt/sources.list.d/kurtosis.list
+sudo apt update
+sudo apt install kurtosis-cli
+curl -L https://foundry.paradigm.xyz | bash
