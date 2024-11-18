@@ -1,0 +1,351 @@
+goroutine profile: total 5170
+5067 @ 0x46128e 0x42c5ad 0x42c1d2 0xdde6be 0x494c01
+#	0xdde6bd	github.com/ledgerwatch/erigon/zk/utils.(*TxGasLogger).Start.func1+0x5d	github.com/ledgerwatch/erigon/zk/utils/tx_gas_logger.go:52
+
+8 @ 0x46128e 0x471805 0x1df3012 0xebcbed 0x494c01
+#	0x1df3011	github.com/ledgerwatch/erigon/p2p/sentry.(*GrpcServer).Messages+0x231			github.com/ledgerwatch/erigon/p2p/sentry/sentry_grpc_server.go:1219
+#	0xebcbec	github.com/ledgerwatch/erigon-lib/direct.(*SentryClientDirect).Messages.func1+0x6c	github.com/ledgerwatch/erigon-lib@v1.0.0/direct/sentry_client.go:254
+
+8 @ 0x46128e 0x471805 0x1dfe45f 0x494c01
+#	0x1dfe45e	github.com/ledgerwatch/erigon/p2p/sentry/sentry_multi_client.pumpStreamLoop[...].func2+0xfe	github.com/ledgerwatch/erigon/p2p/sentry/sentry_multi_client/sentry_multi_client.go:224
+
+4 @ 0x46128e 0x471805 0x1df36b2 0xebd28d 0x494c01
+#	0x1df36b1	github.com/ledgerwatch/erigon/p2p/sentry.(*GrpcServer).PeerEvents+0xd1			github.com/ledgerwatch/erigon/p2p/sentry/sentry_grpc_server.go:1256
+#	0xebd28c	github.com/ledgerwatch/erigon-lib/direct.(*SentryClientDirect).PeerEvents.func1+0x6c	github.com/ledgerwatch/erigon-lib@v1.0.0/direct/sentry_client.go:319
+
+2 @ 0x46128e 0x42b845 0x42b497 0x161db3e 0x161c645 0x494c01
+#	0x161db3d	github.com/ledgerwatch/erigon/zk/syncer.(*L1Syncer).queryBlocks+0x65d		github.com/ledgerwatch/erigon/zk/syncer/l1_syncer.go:404
+#	0x161c644	github.com/ledgerwatch/erigon/zk/syncer.(*L1Syncer).RunQueryBlocks.func1+0x1c4	github.com/ledgerwatch/erigon/zk/syncer/l1_syncer.go:192
+
+2 @ 0x46128e 0x42c5ad 0x42c1d2 0x13a8205 0x13a823f 0x13e29d3 0x494c01
+#	0x13a8204	github.com/ledgerwatch/erigon/p2p/enode.(*FairMix).nextFromAny+0x204	github.com/ledgerwatch/erigon/p2p/enode/iter.go:243
+#	0x13a823e	github.com/ledgerwatch/erigon/p2p/enode.(*FairMix).Next+0x23e		github.com/ledgerwatch/erigon/p2p/enode/iter.go:230
+#	0x13e29d2	github.com/ledgerwatch/erigon/p2p.(*dialScheduler).readNodes+0x132	github.com/ledgerwatch/erigon/p2p/dial.go:335
+
+2 @ 0x46128e 0x42c5ad 0x42c1d2 0x14190bf 0x494c01
+#	0x14190be	gopkg.in/natefinch/lumberjack%2ev2.(*Logger).millRun+0x3e	gopkg.in/natefinch/lumberjack.v2@v2.2.1/lumberjack.go:379
+
+2 @ 0x46128e 0x42c5ad 0x42c1d2 0xebcee5 0x15234ac 0x1523251 0x1522e97 0x494c01
+#	0xebcee4	github.com/ledgerwatch/erigon-lib/direct.(*SentryMessagesStreamC).Recv+0x24	github.com/ledgerwatch/erigon-lib@v1.0.0/direct/sentry_client.go:292
+#	0x15234ab	github.com/ledgerwatch/erigon/zk/txpool.(*Fetch).receiveMessage+0x16b		github.com/ledgerwatch/erigon/zk/txpool/fetch.go:174
+#	0x1523250	github.com/ledgerwatch/erigon/zk/txpool.(*Fetch).receiveMessageLoop+0x1d0	github.com/ledgerwatch/erigon/zk/txpool/fetch.go:144
+#	0x1522e96	github.com/ledgerwatch/erigon/zk/txpool.(*Fetch).ConnectSentries.func1+0x56	github.com/ledgerwatch/erigon/zk/txpool/fetch.go:101
+
+2 @ 0x46128e 0x42c5ad 0x42c1d2 0xebcf97 0xebcfb1 0x1dff3c7 0x1dfed99 0x1df82e5 0x494c01
+#	0xebcf96	github.com/ledgerwatch/erigon-lib/direct.(*SentryMessagesStreamC).Recv+0x36					github.com/ledgerwatch/erigon-lib@v1.0.0/direct/sentry_client.go:292
+#	0xebcfb0	github.com/ledgerwatch/erigon-lib/direct.(*SentryMessagesStreamC).RecvMsg+0x50					github.com/ledgerwatch/erigon-lib@v1.0.0/direct/sentry_client.go:302
+#	0x1dff3c6	github.com/ledgerwatch/erigon/p2p/sentry/sentry_multi_client.pumpStreamLoop[...]+0x406				github.com/ledgerwatch/erigon/p2p/sentry/sentry_multi_client/sentry_multi_client.go:245
+#	0x1dfed98	github.com/ledgerwatch/erigon/p2p/sentry/sentry_multi_client.SentryReconnectAndPumpStreamLoop[...]+0x658	github.com/ledgerwatch/erigon/p2p/sentry/sentry_multi_client/sentry_multi_client.go:177
+#	0x1df82e4	github.com/ledgerwatch/erigon/p2p/sentry/sentry_multi_client.(*MultiClient).RecvUploadMessageLoop+0x1e4		github.com/ledgerwatch/erigon/p2p/sentry/sentry_multi_client/sentry_multi_client.go:80
+
+2 @ 0x46128e 0x42c5ad 0x42c1d2 0xebcf97 0xebcfb1 0x1dff3c7 0x1dfed99 0x1df8651 0x494c01
+#	0xebcf96	github.com/ledgerwatch/erigon-lib/direct.(*SentryMessagesStreamC).Recv+0x36					github.com/ledgerwatch/erigon-lib@v1.0.0/direct/sentry_client.go:292
+#	0xebcfb0	github.com/ledgerwatch/erigon-lib/direct.(*SentryMessagesStreamC).RecvMsg+0x50					github.com/ledgerwatch/erigon-lib@v1.0.0/direct/sentry_client.go:302
+#	0x1dff3c6	github.com/ledgerwatch/erigon/p2p/sentry/sentry_multi_client.pumpStreamLoop[...]+0x406				github.com/ledgerwatch/erigon/p2p/sentry/sentry_multi_client/sentry_multi_client.go:245
+#	0x1dfed98	github.com/ledgerwatch/erigon/p2p/sentry/sentry_multi_client.SentryReconnectAndPumpStreamLoop[...]+0x658	github.com/ledgerwatch/erigon/p2p/sentry/sentry_multi_client/sentry_multi_client.go:177
+#	0x1df8650	github.com/ledgerwatch/erigon/p2p/sentry/sentry_multi_client.(*MultiClient).RecvUploadHeadersMessageLoop+0x1b0	github.com/ledgerwatch/erigon/p2p/sentry/sentry_multi_client/sentry_multi_client.go:95
+
+2 @ 0x46128e 0x42c5ad 0x42c1d2 0xebcf97 0xebcfb1 0x1dff3c7 0x1dfed99 0x1df8a71 0x494c01
+#	0xebcf96	github.com/ledgerwatch/erigon-lib/direct.(*SentryMessagesStreamC).Recv+0x36					github.com/ledgerwatch/erigon-lib@v1.0.0/direct/sentry_client.go:292
+#	0xebcfb0	github.com/ledgerwatch/erigon-lib/direct.(*SentryMessagesStreamC).RecvMsg+0x50					github.com/ledgerwatch/erigon-lib@v1.0.0/direct/sentry_client.go:302
+#	0x1dff3c6	github.com/ledgerwatch/erigon/p2p/sentry/sentry_multi_client.pumpStreamLoop[...]+0x406				github.com/ledgerwatch/erigon/p2p/sentry/sentry_multi_client/sentry_multi_client.go:245
+#	0x1dfed98	github.com/ledgerwatch/erigon/p2p/sentry/sentry_multi_client.SentryReconnectAndPumpStreamLoop[...]+0x658	github.com/ledgerwatch/erigon/p2p/sentry/sentry_multi_client/sentry_multi_client.go:177
+#	0x1df8a70	github.com/ledgerwatch/erigon/p2p/sentry/sentry_multi_client.(*MultiClient).RecvMessageLoop+0x250		github.com/ledgerwatch/erigon/p2p/sentry/sentry_multi_client/sentry_multi_client.go:113
+
+2 @ 0x46128e 0x42c5ad 0x42c1d2 0xebd605 0x1525582 0x15253b6 0x1522db7 0x494c01
+#	0xebd604	github.com/ledgerwatch/erigon-lib/direct.(*SentryPeersStreamC).Recv+0x24	github.com/ledgerwatch/erigon-lib@v1.0.0/direct/sentry_client.go:361
+#	0x1525581	github.com/ledgerwatch/erigon/zk/txpool.(*Fetch).receivePeer+0xc1		github.com/ledgerwatch/erigon/zk/txpool/fetch.go:421
+#	0x15253b5	github.com/ledgerwatch/erigon/zk/txpool.(*Fetch).receivePeerLoop+0x1d5		github.com/ledgerwatch/erigon/zk/txpool/fetch.go:395
+#	0x1522db6	github.com/ledgerwatch/erigon/zk/txpool.(*Fetch).ConnectSentries.func2+0x56	github.com/ledgerwatch/erigon/zk/txpool/fetch.go:104
+
+2 @ 0x46128e 0x42c5ad 0x42c1d2 0xebd6b7 0xebd6d1 0x1dff3c7 0x1dfed99 0x1df8d57 0x494c01
+#	0xebd6b6	github.com/ledgerwatch/erigon-lib/direct.(*SentryPeersStreamC).Recv+0x36					github.com/ledgerwatch/erigon-lib@v1.0.0/direct/sentry_client.go:361
+#	0xebd6d0	github.com/ledgerwatch/erigon-lib/direct.(*SentryPeersStreamC).RecvMsg+0x50					github.com/ledgerwatch/erigon-lib@v1.0.0/direct/sentry_client.go:371
+#	0x1dff3c6	github.com/ledgerwatch/erigon/p2p/sentry/sentry_multi_client.pumpStreamLoop[...]+0x406				github.com/ledgerwatch/erigon/p2p/sentry/sentry_multi_client/sentry_multi_client.go:245
+#	0x1dfed98	github.com/ledgerwatch/erigon/p2p/sentry/sentry_multi_client.SentryReconnectAndPumpStreamLoop[...]+0x658	github.com/ledgerwatch/erigon/p2p/sentry/sentry_multi_client/sentry_multi_client.go:177
+#	0x1df8d56	github.com/ledgerwatch/erigon/p2p/sentry/sentry_multi_client.(*MultiClient).PeerEventsLoop+0x116		github.com/ledgerwatch/erigon/p2p/sentry/sentry_multi_client/sentry_multi_client.go:128
+
+2 @ 0x46128e 0x4598f7 0x48edc5 0x5070e7 0x50910b 0x5090f9 0x5b28a5 0x5d2259 0x5d0250 0x5d01ea 0x13c957d 0x494c01
+#	0x48edc4	internal/poll.runtime_pollWait+0x84					runtime/netpoll.go:343
+#	0x5070e6	internal/poll.(*pollDesc).wait+0x26					internal/poll/fd_poll_runtime.go:84
+#	0x50910a	internal/poll.(*pollDesc).waitRead+0x22a				internal/poll/fd_poll_runtime.go:89
+#	0x5090f8	internal/poll.(*FD).ReadFromInet6+0x218					internal/poll/fd_unix.go:274
+#	0x5b28a4	net.(*netFD).readFromInet6+0x24						net/fd_posix.go:72
+#	0x5d2258	net.(*UDPConn).readFrom+0x78						net/udpsock_posix.go:59
+#	0x5d024f	net.(*UDPConn).readFromUDP+0x2f						net/udpsock.go:149
+#	0x5d01e9	net.(*UDPConn).ReadFromUDP+0x49						net/udpsock.go:141
+#	0x13c957c	github.com/ledgerwatch/erigon/p2p/discover.(*UDPv4).readLoop+0x13c	github.com/ledgerwatch/erigon/p2p/discover/v4_udp.go:706
+
+2 @ 0x46128e 0x4598f7 0x48edc5 0x5070e7 0x50c5cc 0x50c5ba 0x5b45c9 0x5cf5de 0x5ce470 0x13efba8 0x13ed54e 0x494c01
+#	0x48edc4	internal/poll.runtime_pollWait+0x84					runtime/netpoll.go:343
+#	0x5070e6	internal/poll.(*pollDesc).wait+0x26					internal/poll/fd_poll_runtime.go:84
+#	0x50c5cb	internal/poll.(*pollDesc).waitRead+0x2ab				internal/poll/fd_poll_runtime.go:89
+#	0x50c5b9	internal/poll.(*FD).Accept+0x299					internal/poll/fd_unix.go:611
+#	0x5b45c8	net.(*netFD).accept+0x28						net/fd_unix.go:172
+#	0x5cf5dd	net.(*TCPListener).accept+0x1d						net/tcpsock_posix.go:152
+#	0x5ce46f	net.(*TCPListener).Accept+0x2f						net/tcpsock.go:315
+#	0x13efba7	github.com/ledgerwatch/erigon/p2p.(*Server).listenLoop+0x707		github.com/ledgerwatch/erigon/p2p/server.go:936
+#	0x13ed54d	github.com/ledgerwatch/erigon/p2p.(*Server).setupListening.func2+0x6d	github.com/ledgerwatch/erigon/p2p/server.go:755
+
+2 @ 0x46128e 0x4598f7 0x48edc5 0x5070e7 0x50c5cc 0x50c5ba 0x5b45c9 0x5cf5de 0x5ce470 0x86ca44 0x1bc5ccf 0x494c01
+#	0x48edc4	internal/poll.runtime_pollWait+0x84				runtime/netpoll.go:343
+#	0x5070e6	internal/poll.(*pollDesc).wait+0x26				internal/poll/fd_poll_runtime.go:84
+#	0x50c5cb	internal/poll.(*pollDesc).waitRead+0x2ab			internal/poll/fd_poll_runtime.go:89
+#	0x50c5b9	internal/poll.(*FD).Accept+0x299				internal/poll/fd_unix.go:611
+#	0x5b45c8	net.(*netFD).accept+0x28					net/fd_unix.go:172
+#	0x5cf5dd	net.(*TCPListener).accept+0x1d					net/tcpsock_posix.go:152
+#	0x5ce46f	net.(*TCPListener).Accept+0x2f					net/tcpsock.go:315
+#	0x86ca43	net/http.(*Server).Serve+0x363					net/http/server.go:3061
+#	0x1bc5cce	github.com/ledgerwatch/erigon/node.StartHTTPEndpoint.func1+0xee	github.com/ledgerwatch/erigon/node/endpoints.go:80
+
+2 @ 0x46128e 0x471805 0x116c0c5 0x13ecd85 0x494c01
+#	0x116c0c4	github.com/ledgerwatch/erigon/p2p/nat.Map+0x484				github.com/ledgerwatch/erigon/p2p/nat/nat.go:131
+#	0x13ecd84	github.com/ledgerwatch/erigon/p2p.(*Server).setupDiscovery.func1+0xc4	github.com/ledgerwatch/erigon/p2p/server.go:631
+
+2 @ 0x46128e 0x471805 0x116c0c5 0x13ed6c5 0x494c01
+#	0x116c0c4	github.com/ledgerwatch/erigon/p2p/nat.Map+0x484				github.com/ledgerwatch/erigon/p2p/nat/nat.go:131
+#	0x13ed6c4	github.com/ledgerwatch/erigon/p2p.(*Server).setupListening.func1+0xc4	github.com/ledgerwatch/erigon/p2p/server.go:746
+
+2 @ 0x46128e 0x471805 0x13bc56e 0x13bc2a5 0x13bbf07 0x13bcc3e 0x13a882c 0x494c01
+#	0x13bc56d	github.com/ledgerwatch/erigon/p2p/discover.(*lookup).slowdown+0xad	github.com/ledgerwatch/erigon/p2p/discover/lookup.go:155
+#	0x13bc2a4	github.com/ledgerwatch/erigon/p2p/discover.(*lookup).startQueries+0xa4	github.com/ledgerwatch/erigon/p2p/discover/lookup.go:115
+#	0x13bbf06	github.com/ledgerwatch/erigon/p2p/discover.(*lookup).advance+0x26	github.com/ledgerwatch/erigon/p2p/discover/lookup.go:72
+#	0x13bcc3d	github.com/ledgerwatch/erigon/p2p/discover.(*lookupIterator).Next+0x9d	github.com/ledgerwatch/erigon/p2p/discover/lookup.go:236
+#	0x13a882b	github.com/ledgerwatch/erigon/p2p/enode.(*FairMix).runSource+0xcb	github.com/ledgerwatch/erigon/p2p/enode/iter.go:282
+
+2 @ 0x46128e 0x471805 0x13be71f 0x494c01
+#	0x13be71e	github.com/ledgerwatch/erigon/p2p/discover.(*Table).loop+0x35e	github.com/ledgerwatch/erigon/p2p/discover/table.go:271
+
+2 @ 0x46128e 0x471805 0x13c7305 0x494c01
+#	0x13c7304	github.com/ledgerwatch/erigon/p2p/discover.(*UDPv4).loop+0x384	github.com/ledgerwatch/erigon/p2p/discover/v4_udp.go:587
+
+2 @ 0x46128e 0x471805 0x13c8747 0x494c01
+#	0x13c8746	github.com/ledgerwatch/erigon/p2p/discover.(*UDPv4).loop.func1+0x1e6	github.com/ledgerwatch/erigon/p2p/discover/v4_udp.go:545
+
+2 @ 0x46128e 0x471805 0x13e1a0f 0x494c01
+#	0x13e1a0e	github.com/ledgerwatch/erigon/p2p.(*dialScheduler).loop+0x2ee	github.com/ledgerwatch/erigon/p2p/dial.go:251
+
+2 @ 0x46128e 0x471805 0x13edd57 0x494c01
+#	0x13edd56	github.com/ledgerwatch/erigon/p2p.(*Server).run+0x5f6	github.com/ledgerwatch/erigon/p2p/server.go:796
+
+2 @ 0x46128e 0x471805 0x1588625 0xebdaad 0x494c01
+#	0x1588624	github.com/ledgerwatch/erigon-lib/kv/remotedbserver.(*KvServer).StateChanges+0x104		github.com/ledgerwatch/erigon-lib@v1.0.0/kv/remotedbserver/remotedbserver.go:444
+#	0xebdaac	github.com/ledgerwatch/erigon-lib/direct.(*StateDiffClientDirect).StateChanges.func1+0x6c	github.com/ledgerwatch/erigon-lib@v1.0.0/direct/state_diff_client.go:55
+
+1 @ 0x431a49 0x491169 0x594753 0x494c01
+#	0x491168	os/signal.signal_recv+0x28	runtime/sigqueue.go:152
+#	0x594752	os/signal.loop+0x12		os/signal/signal_unix.go:23
+
+1 @ 0x455ed1 0x48e99d 0xed9231 0xed9065 0xed5b06 0xf3fdc8 0xf408c5 0x869909 0x86b222 0x86c5ee 0x8684d4 0x494c01
+#	0x48e99c	runtime/pprof.runtime_goroutineProfileWithLabels+0x1c	runtime/mprof.go:844
+#	0xed9230	runtime/pprof.writeRuntimeProfile+0xb0			runtime/pprof/pprof.go:734
+#	0xed9064	runtime/pprof.writeGoroutine+0x44			runtime/pprof/pprof.go:694
+#	0xed5b05	runtime/pprof.(*Profile).WriteTo+0x145			runtime/pprof/pprof.go:329
+#	0xf3fdc7	net/http/pprof.handler.ServeHTTP+0x4a7			net/http/pprof/pprof.go:267
+#	0xf408c4	net/http/pprof.Index+0xe4				net/http/pprof/pprof.go:384
+#	0x869908	net/http.HandlerFunc.ServeHTTP+0x28			net/http/server.go:2141
+#	0x86b221	net/http.(*ServeMux).ServeHTTP+0x141			net/http/server.go:2519
+#	0x86c5ed	net/http.serverHandler.ServeHTTP+0x8d			net/http/server.go:2943
+#	0x8684d3	net/http.(*conn).serve+0x5f3				net/http/server.go:2014
+
+1 @ 0x46128e 0x42c5ad 0x42c1b2 0x1bb3b49 0xebb2ad 0x494c01
+#	0x1bb3b48	github.com/ledgerwatch/erigon/ethdb/privateapi.(*MiningServer).OnPendingLogs+0x68	github.com/ledgerwatch/erigon/ethdb/privateapi/mining.go:95
+#	0xebb2ac	github.com/ledgerwatch/erigon-lib/direct.(*MiningClient).OnPendingLogs.func1+0x6c	github.com/ledgerwatch/erigon-lib@v1.0.0/direct/mining_client.go:152
+
+1 @ 0x46128e 0x42c5ad 0x42c1b2 0x1dd6cae 0x1e7927a 0x1e79240 0x494c01
+#	0x1dd6cad	github.com/ledgerwatch/erigon/cmd/rpcdaemon/cli.startRegularRpcServer+0x22ad	github.com/ledgerwatch/erigon/cmd/rpcdaemon/cli/config.go:789
+#	0x1e79279	github.com/ledgerwatch/erigon/cmd/rpcdaemon/cli.StartRpcServer+0x59		github.com/ledgerwatch/erigon/cmd/rpcdaemon/cli/config.go:556
+#	0x1e7923f	github.com/ledgerwatch/erigon/eth.(*Ethereum).Init.func2+0x1f			github.com/ledgerwatch/erigon/eth/backend.go:1373
+
+1 @ 0x46128e 0x42c5ad 0x42c1b2 0x1dd7966 0x494c01
+#	0x1dd7965	github.com/ledgerwatch/erigon/cmd/rpcdaemon/cli.stopAuthenticatedRpcServer+0x85	github.com/ledgerwatch/erigon/cmd/rpcdaemon/cli/config.go:825
+
+1 @ 0x46128e 0x42c5ad 0x42c1b2 0x1e85fae 0x1e85f9c 0x1ea0632 0x1e93fdf 0xe19e3d 0xe167fb 0x1ea01ad 0x1ea0186 0x460e1b 0x494c01
+#	0x1e85fad	github.com/ledgerwatch/erigon/node.(*Node).Wait+0x6d			github.com/ledgerwatch/erigon/node/node.go:272
+#	0x1e85f9b	github.com/ledgerwatch/erigon/turbo/node.(*ErigonNode).Serve+0x5b	github.com/ledgerwatch/erigon/turbo/node/node.go:35
+#	0x1ea0631	main.runErigon+0x391							github.com/ledgerwatch/erigon/cmd/cdk-erigon/main.go:78
+#	0x1e93fde	github.com/ledgerwatch/erigon/turbo/app.MakeApp_zkEvm.func1+0x19e	github.com/ledgerwatch/erigon/turbo/app/make_app_zkevm.go:46
+#	0xe19e3c	github.com/urfave/cli/v2.(*Command).Run+0x9dc				github.com/urfave/cli/v2@v2.27.2/command.go:276
+#	0xe167fa	github.com/urfave/cli/v2.(*App).RunContext+0x5da			github.com/urfave/cli/v2@v2.27.2/app.go:333
+#	0x1ea01ac	github.com/urfave/cli/v2.(*App).Run+0xac				github.com/urfave/cli/v2@v2.27.2/app.go:307
+#	0x1ea0185	main.main+0x85								github.com/ledgerwatch/erigon/cmd/cdk-erigon/main.go:46
+#	0x460e1a	runtime.main+0x2ba							runtime/proc.go:267
+
+1 @ 0x46128e 0x42c5ad 0x42c1d2 0x10f0345 0x10f8118 0x494c01
+#	0x10f0344	github.com/anacrolix/go-libutp.(*Socket).Accept+0x24		github.com/anacrolix/go-libutp@v1.3.1/socket.go:387
+#	0x10f8117	github.com/anacrolix/torrent.(*Client).acceptConnections+0x57	github.com/anacrolix/torrent@v1.52.6-0.20231201115409-7ea994b6bbd8/client.go:502
+
+1 @ 0x46128e 0x42c5ad 0x42c1d2 0x1353b3c 0x494c01
+#	0x1353b3b	github.com/ledgerwatch/erigon/consensus/ethash.(*meterArbiter).tick+0x7b	github.com/ledgerwatch/erigon/consensus/ethash/meter.go:143
+
+1 @ 0x46128e 0x42c5ad 0x42c1d2 0xeb9065 0x1bb76bd 0x15fb09d 0x494c01
+#	0xeb9064	github.com/ledgerwatch/erigon-lib/direct.(*SubscribeStreamC).Recv+0x24				github.com/ledgerwatch/erigon-lib@v1.0.0/direct/eth_backend_client.go:102
+#	0x1bb76bc	github.com/ledgerwatch/erigon/cmd/rpcdaemon/rpcservices.(*RemoteBackend).Subscribe+0x17c	github.com/ledgerwatch/erigon/cmd/rpcdaemon/rpcservices/eth_backend.go:210
+#	0x15fb09c	github.com/ledgerwatch/erigon/turbo/rpchelper.New.func1+0xdc					github.com/ledgerwatch/erigon/turbo/rpchelper/filters.go:76
+
+1 @ 0x46128e 0x42c5ad 0x42c1d2 0xeb95e5 0x1bb216b 0x1bb0e6a 0xeb9372 0x494c01
+#	0xeb95e4	github.com/ledgerwatch/erigon-lib/direct.(*SubscribeLogsStreamS).Recv+0x24			github.com/ledgerwatch/erigon-lib@v1.0.0/direct/eth_backend_client.go:158
+#	0x1bb216a	github.com/ledgerwatch/erigon/ethdb/privateapi.(*LogsFilterAggregator).subscribeLogs+0xaa	github.com/ledgerwatch/erigon/ethdb/privateapi/logsfilter.go:133
+#	0x1bb0e69	github.com/ledgerwatch/erigon/ethdb/privateapi.(*EthBackendServer).SubscribeLogs+0x29		github.com/ledgerwatch/erigon/ethdb/privateapi/ethbackend.go:257
+#	0xeb9371	github.com/ledgerwatch/erigon-lib/direct.(*EthBackendClientDirect).SubscribeLogs.func1+0x91	github.com/ledgerwatch/erigon-lib@v1.0.0/direct/eth_backend_client.go:125
+
+1 @ 0x46128e 0x42c5ad 0x42c1d2 0xeb9805 0x1bb793f 0x15faea6 0x494c01
+#	0xeb9804	github.com/ledgerwatch/erigon-lib/direct.(*SubscribeLogsStreamC).Recv+0x24			github.com/ledgerwatch/erigon-lib@v1.0.0/direct/eth_backend_client.go:185
+#	0x1bb793e	github.com/ledgerwatch/erigon/cmd/rpcdaemon/rpcservices.(*RemoteBackend).SubscribeLogs+0x1be	github.com/ledgerwatch/erigon/cmd/rpcdaemon/rpcservices/eth_backend.go:234
+#	0x15faea5	github.com/ledgerwatch/erigon/turbo/rpchelper.New.func2+0xe5					github.com/ledgerwatch/erigon/turbo/rpchelper/filters.go:101
+
+1 @ 0x46128e 0x42c5ad 0x42c1d2 0xebaa25 0x15fb589 0x15faab3 0x494c01
+#	0xebaa24	github.com/ledgerwatch/erigon-lib/direct.(*MiningOnPendingBlockC).Recv+0x24		github.com/ledgerwatch/erigon-lib@v1.0.0/direct/mining_client.go:85
+#	0x15fb588	github.com/ledgerwatch/erigon/turbo/rpchelper.(*Filters).subscribeToPendingBlocks+0x108	github.com/ledgerwatch/erigon/turbo/rpchelper/filters.go:226
+#	0x15faab2	github.com/ledgerwatch/erigon/turbo/rpchelper.New.func4+0x92				github.com/ledgerwatch/erigon/turbo/rpchelper/filters.go:147
+
+1 @ 0x46128e 0x42c5ad 0x42c1d2 0xebb5a5 0x15fbac9 0x15fa8f3 0x494c01
+#	0xebb5a4	github.com/ledgerwatch/erigon-lib/direct.(*MiningOnPendingLogsC).Recv+0x24		github.com/ledgerwatch/erigon-lib@v1.0.0/direct/mining_client.go:186
+#	0x15fbac8	github.com/ledgerwatch/erigon/turbo/rpchelper.(*Filters).subscribeToPendingLogs+0x108	github.com/ledgerwatch/erigon/turbo/rpchelper/filters.go:270
+#	0x15fa8f2	github.com/ledgerwatch/erigon/turbo/rpchelper.New.func5+0x92				github.com/ledgerwatch/erigon/turbo/rpchelper/filters.go:168
+
+1 @ 0x46128e 0x42c5ad 0x42c1d2 0xebdbe5 0x1525b38 0x1522fa5 0x494c01
+#	0xebdbe4	github.com/ledgerwatch/erigon-lib/direct.(*StateDiffStreamC).Recv+0x24		github.com/ledgerwatch/erigon-lib@v1.0.0/direct/state_diff_client.go:72
+#	0x1525b37	github.com/ledgerwatch/erigon/zk/txpool.(*Fetch).handleStateChanges+0x3d7	github.com/ledgerwatch/erigon/zk/txpool/fetch.go:456
+#	0x1522fa4	github.com/ledgerwatch/erigon/zk/txpool.(*Fetch).ConnectCore.func1+0x64		github.com/ledgerwatch/erigon/zk/txpool/fetch.go:116
+
+1 @ 0x46128e 0x42c5ad 0x42c1d2 0xebdbe5 0x1dd4412 0x1dd41d7 0x494c01
+#	0xebdbe4	github.com/ledgerwatch/erigon-lib/direct.(*StateDiffStreamC).Recv+0x24			github.com/ledgerwatch/erigon-lib@v1.0.0/direct/state_diff_client.go:72
+#	0x1dd4411	github.com/ledgerwatch/erigon/cmd/rpcdaemon/cli.subscribeToStateChanges+0x151		github.com/ledgerwatch/erigon/cmd/rpcdaemon/cli/config.go:230
+#	0x1dd41d6	github.com/ledgerwatch/erigon/cmd/rpcdaemon/cli.subscribeToStateChangesLoop.func1+0x96	github.com/ledgerwatch/erigon/cmd/rpcdaemon/cli/config.go:212
+
+1 @ 0x46128e 0x42c5ad 0x42c1d2 0xebe665 0x15fb3c4 0x15fac73 0x494c01
+#	0xebe664	github.com/ledgerwatch/erigon-lib/direct.(*TxPoolOnAddC).Recv+0x24				github.com/ledgerwatch/erigon-lib@v1.0.0/direct/txpool_client.go:105
+#	0x15fb3c3	github.com/ledgerwatch/erigon/turbo/rpchelper.(*Filters).subscribeToPendingTransactions+0xe3	github.com/ledgerwatch/erigon/turbo/rpchelper/filters.go:200
+#	0x15fac72	github.com/ledgerwatch/erigon/turbo/rpchelper.New.func3+0x92					github.com/ledgerwatch/erigon/turbo/rpchelper/filters.go:124
+
+1 @ 0x46128e 0x4598f7 0x48edc5 0x5070e7 0x5083da 0x5083c8 0x5b25a5 0x5c54c5 0x862357 0x494c01
+#	0x48edc4	internal/poll.runtime_pollWait+0x84		runtime/netpoll.go:343
+#	0x5070e6	internal/poll.(*pollDesc).wait+0x26		internal/poll/fd_poll_runtime.go:84
+#	0x5083d9	internal/poll.(*pollDesc).waitRead+0x279	internal/poll/fd_poll_runtime.go:89
+#	0x5083c7	internal/poll.(*FD).Read+0x267			internal/poll/fd_unix.go:164
+#	0x5b25a4	net.(*netFD).Read+0x24				net/fd_posix.go:55
+#	0x5c54c4	net.(*conn).Read+0x44				net/net.go:185
+#	0x862356	net/http.(*connReader).backgroundRead+0x36	net/http/server.go:683
+
+1 @ 0x46128e 0x4598f7 0x48edc5 0x5070e7 0x50c5cc 0x50c5ba 0x5b45c9 0x5cf5de 0x5ce470 0x10f8118 0x494c01
+#	0x48edc4	internal/poll.runtime_pollWait+0x84				runtime/netpoll.go:343
+#	0x5070e6	internal/poll.(*pollDesc).wait+0x26				internal/poll/fd_poll_runtime.go:84
+#	0x50c5cb	internal/poll.(*pollDesc).waitRead+0x2ab			internal/poll/fd_poll_runtime.go:89
+#	0x50c5b9	internal/poll.(*FD).Accept+0x299				internal/poll/fd_unix.go:611
+#	0x5b45c8	net.(*netFD).accept+0x28					net/fd_unix.go:172
+#	0x5cf5dd	net.(*TCPListener).accept+0x1d					net/tcpsock_posix.go:152
+#	0x5ce46f	net.(*TCPListener).Accept+0x2f					net/tcpsock.go:315
+#	0x10f8117	github.com/anacrolix/torrent.(*Client).acceptConnections+0x57	github.com/anacrolix/torrent@v1.52.6-0.20231201115409-7ea994b6bbd8/client.go:502
+
+1 @ 0x46128e 0x4598f7 0x48edc5 0x5070e7 0x50c5cc 0x50c5ba 0x5b45c9 0x5cf5de 0x5ce470 0x86ca44 0x86c6b1 0x145f077 0x494c01
+#	0x48edc4	internal/poll.runtime_pollWait+0x84				runtime/netpoll.go:343
+#	0x5070e6	internal/poll.(*pollDesc).wait+0x26				internal/poll/fd_poll_runtime.go:84
+#	0x50c5cb	internal/poll.(*pollDesc).waitRead+0x2ab			internal/poll/fd_poll_runtime.go:89
+#	0x50c5b9	internal/poll.(*FD).Accept+0x299				internal/poll/fd_unix.go:611
+#	0x5b45c8	net.(*netFD).accept+0x28					net/fd_unix.go:172
+#	0x5cf5dd	net.(*TCPListener).accept+0x1d					net/tcpsock_posix.go:152
+#	0x5ce46f	net.(*TCPListener).Accept+0x2f					net/tcpsock.go:315
+#	0x86ca43	net/http.(*Server).Serve+0x363					net/http/server.go:3061
+#	0x86c6b0	net/http.(*Server).ListenAndServe+0x70				net/http/server.go:2990
+#	0x145f076	github.com/ledgerwatch/erigon/turbo/debug.StartPProf.func1+0x16	github.com/ledgerwatch/erigon/turbo/debug/flags.go:256
+
+1 @ 0x46128e 0x4598f7 0x48edc5 0x5070e7 0x50c5cc 0x50c5ba 0x5b45c9 0x5cf5de 0x5ce470 0x957254 0x1baec79 0x494c01
+#	0x48edc4	internal/poll.runtime_pollWait+0x84					runtime/netpoll.go:343
+#	0x5070e6	internal/poll.(*pollDesc).wait+0x26					internal/poll/fd_poll_runtime.go:84
+#	0x50c5cb	internal/poll.(*pollDesc).waitRead+0x2ab				internal/poll/fd_poll_runtime.go:89
+#	0x50c5b9	internal/poll.(*FD).Accept+0x299					internal/poll/fd_unix.go:611
+#	0x5b45c8	net.(*netFD).accept+0x28						net/fd_unix.go:172
+#	0x5cf5dd	net.(*TCPListener).accept+0x1d						net/tcpsock_posix.go:152
+#	0x5ce46f	net.(*TCPListener).Accept+0x2f						net/tcpsock.go:315
+#	0x957253	google.golang.org/grpc.(*Server).Serve+0x4b3				google.golang.org/grpc@v1.63.2/server.go:875
+#	0x1baec78	github.com/ledgerwatch/erigon/ethdb/privateapi.StartGrpc.func1+0x78	github.com/ledgerwatch/erigon/ethdb/privateapi/all.go:47
+
+1 @ 0x46128e 0x4598f7 0x48edc5 0x5070e7 0x50d24a 0x50d233 0x5c9676 0x10e8dfb 0x10ea3f0 0x10ea3d8 0x10ef239 0x494c01
+#	0x48edc4	internal/poll.runtime_pollWait+0x84				runtime/netpoll.go:343
+#	0x5070e6	internal/poll.(*pollDesc).wait+0x26				internal/poll/fd_poll_runtime.go:84
+#	0x50d249	internal/poll.(*pollDesc).waitRead+0x129			internal/poll/fd_poll_runtime.go:89
+#	0x50d232	internal/poll.(*FD).RawRead+0x112				internal/poll/fd_unix.go:708
+#	0x5c9675	net.(*rawConn).Read+0x35					net/rawconn.go:44
+#	0x10e8dfa	github.com/anacrolix/mmsg/socket.(*Conn).recvMsgs+0x17a		github.com/anacrolix/mmsg@v1.0.0/socket/rawconn_mmsg.go:34
+#	0x10ea3ef	github.com/anacrolix/mmsg/socket.(*Conn).RecvMsgs+0xef		github.com/anacrolix/mmsg@v1.0.0/socket/socket.go:272
+#	0x10ea3d7	github.com/anacrolix/mmsg.(*Conn).RecvMsgs+0xd7			github.com/anacrolix/mmsg@v1.0.0/mmsg.go:49
+#	0x10ef238	github.com/anacrolix/go-libutp.(*Socket).packetReader+0x1d8	github.com/anacrolix/go-libutp@v1.3.1/socket.go:196
+
+1 @ 0x46128e 0x471805 0x1102865 0x494c01
+#	0x1102864	github.com/anacrolix/torrent.(*Client).acceptLimitClearer+0xa4	github.com/anacrolix/torrent@v1.52.6-0.20231201115409-7ea994b6bbd8/client.go:1747
+
+1 @ 0x46128e 0x471805 0x11502e5 0x15691df 0x494c01
+#	0x11502e4	github.com/ledgerwatch/erigon-lib/downloader/downloadercfg.(*DnsCacheResolver).Run+0xe4	github.com/ledgerwatch/erigon-lib@v1.0.0/downloader/downloadercfg/dns_cache_resolver.go:42
+#	0x15691de	github.com/ledgerwatch/erigon-lib/downloader.openClient.func2+0x1e			github.com/ledgerwatch/erigon-lib@v1.0.0/downloader/downloader.go:2600
+
+1 @ 0x46128e 0x471805 0x126edec 0x494c01
+#	0x126edeb	github.com/ledgerwatch/erigon/zk.ProgressPrinterWithoutTotal.func2+0x16b	github.com/ledgerwatch/erigon/zk/utils.go:83
+
+1 @ 0x46128e 0x471805 0x135491c 0x494c01
+#	0x135491b	github.com/ledgerwatch/erigon/consensus/ethash.(*remoteSealer).loop+0x1fb	github.com/ledgerwatch/erigon/consensus/ethash/sealer.go:162
+
+1 @ 0x46128e 0x471805 0x13bc56e 0x13bc2a5 0x13bbf07 0x13bbe45 0x13c550a 0x13bfc39 0x494c01
+#	0x13bc56d	github.com/ledgerwatch/erigon/p2p/discover.(*lookup).slowdown+0xad	github.com/ledgerwatch/erigon/p2p/discover/lookup.go:155
+#	0x13bc2a4	github.com/ledgerwatch/erigon/p2p/discover.(*lookup).startQueries+0xa4	github.com/ledgerwatch/erigon/p2p/discover/lookup.go:115
+#	0x13bbf06	github.com/ledgerwatch/erigon/p2p/discover.(*lookup).advance+0x26	github.com/ledgerwatch/erigon/p2p/discover/lookup.go:72
+#	0x13bbe44	github.com/ledgerwatch/erigon/p2p/discover.(*lookup).run+0x24		github.com/ledgerwatch/erigon/p2p/discover/lookup.go:64
+#	0x13c5509	github.com/ledgerwatch/erigon/p2p/discover.(*UDPv4).lookupRandom+0x29	github.com/ledgerwatch/erigon/p2p/discover/v4_udp.go:334
+#	0x13bfc38	github.com/ledgerwatch/erigon/p2p/discover.(*Table).doRefresh+0x98	github.com/ledgerwatch/erigon/p2p/discover/table.go:371
+
+1 @ 0x46128e 0x471805 0x1432798 0x494c01
+#	0x1432797	github.com/ledgerwatch/erigon-lib/common/disk.UpdateDiskStats+0xd7	github.com/ledgerwatch/erigon-lib@v1.0.0/common/disk/common.go:15
+
+1 @ 0x46128e 0x471805 0x145cea9 0x494c01
+#	0x145cea8	github.com/ledgerwatch/erigon-lib/common/mem.LogMemStats+0x108	github.com/ledgerwatch/erigon-lib@v1.0.0/common/mem/common.go:52
+
+1 @ 0x46128e 0x471805 0x145f772 0x494c01
+#	0x145f771	github.com/ledgerwatch/erigon/turbo/debug.ListenSignals+0x1d1	github.com/ledgerwatch/erigon/turbo/debug/signal.go:25
+
+1 @ 0x46128e 0x471805 0x153391f 0x494c01
+#	0x153391e	github.com/ledgerwatch/erigon/zk/txpool.MainLoop+0x2be	github.com/ledgerwatch/erigon/zk/txpool/pool.go:1398
+
+1 @ 0x46128e 0x471805 0x15465b5 0xebe36d 0x494c01
+#	0x15465b4	github.com/ledgerwatch/erigon/zk/txpool.(*GrpcServer).OnAdd+0x114		github.com/ledgerwatch/erigon/zk/txpool/txpool_grpc_server.go:259
+#	0xebe36c	github.com/ledgerwatch/erigon-lib/direct.(*TxPoolClient).OnAdd.func1+0x6c	github.com/ledgerwatch/erigon-lib@v1.0.0/direct/txpool_client.go:70
+
+1 @ 0x46128e 0x471805 0x1554338 0x1553f1f 0x494c01
+#	0x1554337	github.com/ledgerwatch/erigon-lib/downloader.(*Downloader).mainLoop+0x2b7			github.com/ledgerwatch/erigon-lib@v1.0.0/downloader/downloader.go:1310
+#	0x1553f1e	github.com/ledgerwatch/erigon-lib/downloader.(*Downloader).MainLoopInBackground.func1+0x5e	github.com/ledgerwatch/erigon-lib@v1.0.0/downloader/downloader.go:773
+
+1 @ 0x46128e 0x471805 0x1555825 0x494c01
+#	0x1555824	github.com/ledgerwatch/erigon-lib/downloader.(*Downloader).mainLoop.func2+0x884	github.com/ledgerwatch/erigon-lib@v1.0.0/downloader/downloader.go:1058
+
+1 @ 0x46128e 0x471805 0x1876cbd 0x494c01
+#	0x1876cbc	github.com/ledgerwatch/erigon/turbo/stages/headerdownload.(*HeaderDownload).StartPoSDownloader.func1+0x43c	github.com/ledgerwatch/erigon/turbo/stages/headerdownload/header_algos.go:1328
+
+1 @ 0x46128e 0x471805 0x1baf2f2 0x494c01
+#	0x1baf2f1	github.com/ledgerwatch/erigon/ethdb/privateapi.NewEthBackendServer.func1+0x171	github.com/ledgerwatch/erigon/ethdb/privateapi/ethbackend.go:83
+
+1 @ 0x46128e 0x471805 0x1bafdce 0xeb8d6d 0x494c01
+#	0x1bafdcd	github.com/ledgerwatch/erigon/ethdb/privateapi.(*EthBackendServer).Subscribe+0x24d	github.com/ledgerwatch/erigon/ethdb/privateapi/ethbackend.go:168
+#	0xeb8d6c	github.com/ledgerwatch/erigon-lib/direct.(*EthBackendClientDirect).Subscribe.func1+0x6c	github.com/ledgerwatch/erigon-lib@v1.0.0/direct/eth_backend_client.go:68
+
+1 @ 0x46128e 0x471805 0x1bb3db1 0xeba72d 0x494c01
+#	0x1bb3db0	github.com/ledgerwatch/erigon/ethdb/privateapi.(*MiningServer).OnPendingBlock+0xd0	github.com/ledgerwatch/erigon/ethdb/privateapi/mining.go:112
+#	0xeba72c	github.com/ledgerwatch/erigon-lib/direct.(*MiningClient).OnPendingBlock.func1+0x6c	github.com/ledgerwatch/erigon-lib@v1.0.0/direct/mining_client.go:50
+
+1 @ 0x46128e 0x471805 0x1e749e5 0x494c01
+#	0x1e749e4	github.com/ledgerwatch/erigon/eth.New.func15+0x144	github.com/ledgerwatch/erigon/eth/backend.go:797
+
+1 @ 0x46128e 0x471805 0x1e76b0f 0x494c01
+#	0x1e76b0e	github.com/ledgerwatch/erigon/eth.New.func8+0x14e	github.com/ledgerwatch/erigon/eth/backend.go:513
+
+1 @ 0x46128e 0x491bc5 0x1501f50 0x494c01
+#	0x491bc4	time.Sleep+0x124						runtime/time.go:195
+#	0x1501f4f	github.com/VictoriaMetrics/metrics.summariesSwapCron+0x2f	github.com/VictoriaMetrics/metrics@v1.23.1/summary.go:237
+
+1 @ 0x46128e 0x491bc5 0x1a17c57 0x1a4babd 0x192db97 0x192c616 0x1e0e05b 0x1e0d847 0x494c01
+#	0x491bc4	time.Sleep+0x124							runtime/time.go:195
+#	0x1a17c56	github.com/ledgerwatch/erigon/zk/stages.SpawnStageBatches+0x1e96	github.com/ledgerwatch/erigon/zk/stages/stage_batches.go:292
+#	0x1a4babc	github.com/ledgerwatch/erigon/zk/stages.DefaultZkStages.func7+0x9c	github.com/ledgerwatch/erigon/zk/stages/stages.go:280
+#	0x192db96	github.com/ledgerwatch/erigon/eth/stagedsync.(*Sync).runStage+0x196	github.com/ledgerwatch/erigon/eth/stagedsync/sync.go:513
+#	0x192c615	github.com/ledgerwatch/erigon/eth/stagedsync.(*Sync).Run+0x2b5		github.com/ledgerwatch/erigon/eth/stagedsync/sync.go:383
+#	0x1e0e05a	github.com/ledgerwatch/erigon/turbo/stages.StageLoopIteration+0x41a	github.com/ledgerwatch/erigon/turbo/stages/stageloop.go:154
+#	0x1e0d846	github.com/ledgerwatch/erigon/turbo/stages.StageLoop+0x186		github.com/ledgerwatch/erigon/turbo/stages/stageloop.go:73
+
